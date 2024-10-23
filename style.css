@@ -1,0 +1,74 @@
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Main content styling */
+  main {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Task form styling */
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    font-size: 1em;
+  }
+  
+  button {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  button:hover {
+    background-color: #00a37e;
+  }
+  
+  /* Task list styling */
+  .task-list .task {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .task button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .task button:hover {
+    background-color: darkred;
+  }
+  
