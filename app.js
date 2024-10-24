@@ -1,4 +1,3 @@
-// Task form elements
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
 const categoryInput = document.getElementById('category-input');
@@ -9,30 +8,34 @@ const categoryFilter = document.getElementById('category-select');
 taskForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Get the input values
   const taskText = taskInput.value;
   const taskCategory = categoryInput.value;
 
-  // Create a new task
+  // Create task element
   const taskItem = document.createElement('article');
   taskItem.classList.add('task');
   taskItem.dataset.category = taskCategory;
+
   taskItem.innerHTML = `
+    <input type="checkbox" class="task-checkbox">
     <span>${taskText} (${taskCategory})</span>
     <button class="delete-btn">Delete</button>
   `;
 
-  // Append to the task list
   taskList.appendChild(taskItem);
 
-  // Clear the input
+  // Clear input
   taskInput.value = '';
 });
 
-// Task deletion
+// Handle checkbox and delete button
 taskList.addEventListener('click', function (e) {
   if (e.target.classList.contains('delete-btn')) {
     e.target.parentElement.remove();
+  }
+  if (e.target.classList.contains('task-checkbox')) {
+    const taskItem = e.target.nextElementSibling;
+    taskItem.style.textDecoration = e.target.checked ? 'line-through' : 'none';
   }
 });
 
@@ -43,7 +46,7 @@ categoryFilter.addEventListener('change', function () {
 
   tasks.forEach(task => {
     if (selectedCategory === 'all' || task.dataset.category === selectedCategory) {
-      task.style.display = 'block';
+      task.style.display = 'flex';
     } else {
       task.style.display = 'none';
     }

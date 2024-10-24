@@ -1,74 +1,110 @@
-/* Basic body styling */
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .app-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #4A90E2;
+  }
+  
+  .filters {
+    margin: 20px 0;
+  }
+  
+  .filters select {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #f0f4f8;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .task-list {
+    margin: 20px 0;
+  }
+  
+  .task {
+    background-color: #f8fafc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task span {
+    font-size: 1rem;
+  }
+  
+  .task button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .task button:hover {
+    background-color: #ff3b3b;
+  }
+  
+  .task-form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* Header styling */
-  header {
-    background-color: #6c5ce7;
-    color: white;
-    padding: 20px;
+  .task-form input, .task-form select, .task-form button {
     width: 100%;
-    text-align: center;
-  }
-  
-  /* Main content styling */
-  main {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  /* Task form styling */
-  form {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  input, select, button {
+    max-width: 300px;
     padding: 10px;
-    font-size: 1em;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
   }
   
-  button {
-    background-color: #00b894;
+  .task-form button {
+    background-color: #4A90E2;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
   }
   
-  button:hover {
-    background-color: #00a37e;
+  .task-form button:hover {
+    background-color: #357ABD;
   }
   
-  /* Task list styling */
-  .task-list .task {
-    background-color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .task button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .task button:hover {
-    background-color: darkred;
+  footer {
+    margin-top: 20px;
+    color: #aaa;
   }
   
