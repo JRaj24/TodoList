@@ -28,5 +28,5 @@ Deleting a Task:
 
 Click the "Delete" button next to a task to remove it from the list.
 
-Demo: 
+## Demo: 
 ![image](https://github.com/user-attachments/assets/b749f656-abae-48df-b11c-d7e144b5601e)
