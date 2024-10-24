@@ -1,34 +1,19 @@
-name: Vercel Deployment
+name: Deploy to Vercel
 
 on:
   push:
     branches:
-      - master  # Change this to your default branch if different
-  pull_request:
-    branches:
-      - master  # Change this to your default branch if different
+      - master  # or your preferred branch
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'  # Use Node.js version 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Vercel CLI
-        uses: amondnet/vercel-action@v20.0.1
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Your Vercel token
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Your Vercel organization ID
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Your Vercel project ID
-          vercel-args: '--prod'  # Deploy to production
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+      
+      - name: Deploy to Vercel
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
